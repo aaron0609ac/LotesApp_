@@ -9,10 +9,13 @@ import {
   IonMenu,
   IonMenuToggle,
   IonNote,
+  IonButton
 } from '@ionic/react';
-
 import { useLocation } from 'react-router-dom';
-import { archiveOutline, archiveSharp, bookmarkOutline, heartOutline, heartSharp, mailOutline, mailSharp, paperPlaneOutline, paperPlaneSharp, trashOutline, trashSharp, warningOutline, warningSharp } from 'ionicons/icons';
+import { heartOutline, heartSharp, mailOutline, mailSharp,
+   paperPlaneOutline, paperPlaneSharp, trashOutline, 
+   trashSharp, warningOutline, warningSharp, mapOutline, locationOutline,
+  navigateCircleOutline, peopleOutline, trendingUpOutline } from 'ionicons/icons';
 import './Menu.css';
 
 interface AppPage {
@@ -21,57 +24,69 @@ interface AppPage {
   mdIcon: string;
   title: string;
 }
-
 const appPages: AppPage[] = [
+  
   {
-    title: 'Inbox',
-    url: '/page/Inbox',
-    iosIcon: mailOutline,
-    mdIcon: mailSharp
+    title: 'Registro de lotes',
+    url: '/page/LotesRegistro',
+    iosIcon: locationOutline,
+    mdIcon: locationOutline
   },
   {
-    title: 'Outbox',
-    url: '/page/Outbox',
-    iosIcon: paperPlaneOutline,
-    mdIcon: paperPlaneSharp
+    title: 'Registro de fraccionamientos',
+    url: '/page/Fraccionamientos',
+    iosIcon: navigateCircleOutline,
+    mdIcon: navigateCircleOutline
   },
   {
-    title: 'Favorites',
-    url: '/page/Favorites',
-    iosIcon: heartOutline,
-    mdIcon: heartSharp
+    title: 'Clientes',
+    url: '/page/Clientes',
+    iosIcon: peopleOutline,
+    mdIcon: peopleOutline
   },
   {
-    title: 'Archived',
-    url: '/page/Archived',
+    title: 'Vendedores',
+    url: '/page/Vendedores',
+    iosIcon: trendingUpOutline,
+    mdIcon: trendingUpOutline
+  }
+];
+/*
+{
+    title: 'Lotes',
+    url: '/page/Lotes',
+    iosIcon: mapOutline,
+    mdIcon: mapOutline
+  },
+{
+    title: 'Login',
+    url: '/page/Login',
     iosIcon: archiveOutline,
     mdIcon: archiveSharp
   },
-  {
-    title: 'Trash',
-    url: '/page/Trash',
-    iosIcon: trashOutline,
-    mdIcon: trashSharp
-  },
-  {
-    title: 'Spam',
-    url: '/page/Spam',
-    iosIcon: warningOutline,
-    mdIcon: warningSharp
-  }
-];
+*/
 
 const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
 
 const Menu: React.FC = () => {
   const location = useLocation();
+  const handleLogout = () => {
+   
+    //localStorage.removeItem('authToken');
+    //history.push("./Login",{ noMenu: true });
+    // Redirect the user to the login page
+    window.location.href = './LoginBiometric';
+    
+  };
 
+  const NombreUsuario=localStorage.getItem('nameToken');
+  const EmailUsuario=localStorage.getItem('emailToken');
   return (
     <IonMenu contentId="main" type="overlay">
       <IonContent>
         <IonList id="inbox-list">
-          <IonListHeader>Inbox</IonListHeader>
-          <IonNote>hi@ionicframework.com</IonNote>
+          <IonListHeader>{NombreUsuario}</IonListHeader>
+          <IonNote>{EmailUsuario}</IonNote>
           {appPages.map((appPage, index) => {
             return (
               <IonMenuToggle key={index} autoHide={false}>
@@ -82,17 +97,12 @@ const Menu: React.FC = () => {
               </IonMenuToggle>
             );
           })}
+        <IonButton shape="round" expand="full" onClick={handleLogout}>
+                Logout
+              </IonButton>
         </IonList>
 
-        <IonList id="labels-list">
-          <IonListHeader>Labels</IonListHeader>
-          {labels.map((label, index) => (
-            <IonItem lines="none" key={index}>
-              <IonIcon aria-hidden="true" slot="start" icon={bookmarkOutline} />
-              <IonLabel>{label}</IonLabel>
-            </IonItem>
-          ))}
-        </IonList>
+        
       </IonContent>
     </IonMenu>
   );

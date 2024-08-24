@@ -1,5 +1,7 @@
 {
   "name": "LotesApp",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "react"
 }

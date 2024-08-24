@@ -1,0 +1,92 @@
+.login-form {
+  text-align: center;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 35%;
+  width: 100%;
+  height: 70%;
+  transform: translateY(-50%);
+}
+
+.container {
+  text-align: center;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-50%);
+}
+
+.container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.container p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+.container a {
+  text-decoration: none;
+}
+capacitor-google-map {
+  display: inline-block;
+  height: 90vh;
+  width: 100%;
+  
+  }
+
+  .rounded-input {
+    border-radius: 20px; /* Adjust the border-radius to your desired level of rounding */
+    padding: 10px; /* Add padding for spacing around the input text */
+  }
+  .centered-text {
+    text-align: center;
+  }
+  .vertical-center {
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  width: 90%;
+  }
+  .centered-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    width: 100%;
+}
+.vertically-centered-card {
+  width: 80%;
+ 
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.background {
+  background-image: url('../../public/assets/earth.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Adjust the height as needed */
+}
+.image-container {
+  max-height: 200px; /* Ajusta la altura máxima según tus necesidades */
+  overflow: hidden; /* Oculta cualquier contenido que se desborde */
+}
+
+/* Configura la imagen para cubrir todo el ancho del contenedor y escalar proporcionalmente */
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
