@@ -1,6 +1,6 @@
 require_relative '../../node_modules/@capacitor/ios/scripts/pods_helpers'
 
-platform :ios, '11.0'
+platform :ios, '15.0'
 use_frameworks!
 
 # workaround to avoid Xcode caching of Pods that requires
@@ -23,6 +23,8 @@ end
 target 'App' do
   capacitor_pods
   # Add your Pods here
+  pod 'GoogleMaps', '8.4.0'
+pod 'Google-Maps-iOS-Utils', '5.0.0'
 end
 
 post_install do |installer|
