@@ -108,7 +108,7 @@ const Login: React.FC = () => {
 
           <IonContent className="ion-padding">
           <div className="centered-card ">
-          <IonCard color="light" className="centered-text vertically-centered-card" style={{width:"100%"}}>
+          <IonCard color="light" className="centered-text vertically-centered-card" style={{width:"100%", height:"65%"}}>
           <div className="image-container">
           <img src="./assets/login.jpg" alt="LotesApp" />
         </div>
@@ -119,9 +119,7 @@ const Login: React.FC = () => {
               style={{ fontSize: "70px", color: "#0040ff" }}
               icon={personCircle}
             />*/}
-            <br/>
-              <IonTitle><b>Email</b></IonTitle>
-              <br/>
+              <IonTitle className="ion-margin-top ion-padding-top"><b>Email</b></IonTitle>
               <IonInput
                  fill="solid"
                  shape="round"
@@ -129,22 +127,20 @@ const Login: React.FC = () => {
                 value={username}
                 onIonInput={(e) => setUsername(e.detail.value!)}
               />
-              <br/>
-              <IonTitle><b>Password</b></IonTitle>
-              <br/>
-              <IonInput
+              <IonTitle className="ion-margin-top ion-padding-top"><b>Password</b></IonTitle>
+             
+              <IonInput 
                fill="solid"
               shape="round"
                 type="password"
                 value={password}
                 onIonInput={(e) => setPassword(e.detail.value!)}
               />
-              <br/>
-              <IonButton  shape="round" expand="full" onClick={handleLogin}>
+              <IonButton className="ion-margin-top ion-padding-top" shape="round" expand="full" onClick={handleLogin}>
                 Login
               </IonButton>
-              <IonLoading isOpen={loading} message="Iniciando..." /> 
-              <Link to={`../Registro/`}><p>Crear una cuenta</p></Link>
+              <IonLoading className="ion-margin-top ion-padding-top" isOpen={loading} message="Iniciando..." /> 
+              <Link className="ion-margin-top ion-padding-top" to={`../Registro/`}><p>Crear una cuenta</p></Link>
             
             </IonCol>
         </IonRow>

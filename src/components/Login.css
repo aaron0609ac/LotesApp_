@@ -80,7 +80,7 @@ capacitor-google-map {
   height: 100vh; /* Adjust the height as needed */
 }
 .image-container {
-  max-height: 200px; /* Ajusta la altura máxima según tus necesidades */
+  max-height: 100%; /* Ajusta la altura máxima según tus necesidades */
   overflow: hidden; /* Oculta cualquier contenido que se desborde */
 }
 
