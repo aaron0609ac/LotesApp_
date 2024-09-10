@@ -123,7 +123,7 @@ const Login: React.FC = () => {
               <IonTitle><b>Email</b></IonTitle>
               <br/>
               <IonInput
-                 fill="outline"
+                 fill="solid"
                  shape="round"
                 type="text"
                 value={username}
@@ -133,7 +133,7 @@ const Login: React.FC = () => {
               <IonTitle><b>Password</b></IonTitle>
               <br/>
               <IonInput
-               fill="outline"
+               fill="solid"
               shape="round"
                 type="password"
                 value={password}
