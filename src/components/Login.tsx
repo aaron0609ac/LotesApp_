@@ -119,20 +119,22 @@ const Login: React.FC = () => {
               style={{ fontSize: "70px", color: "#0040ff" }}
               icon={personCircle}
             />*/}
-              <IonTitle className="ion-margin-top ion-padding-top"><b>Email</b></IonTitle>
-              <IonInput
-                 fill="solid"
-                 shape="round"
+              
+              <IonInput className="ion-margin-top ion-padding-top"
+              fill="solid"
+              label="Email"
+              label-placement="floating"
+                 
                 type="text"
                 value={username}
                 onIonInput={(e) => setUsername(e.detail.value!)}
               />
-              <IonTitle className="ion-margin-top ion-padding-top"><b>Password</b></IonTitle>
-             
-              <IonInput 
+              
+              <IonInput className="ion-margin-top ion-padding-top"
+              label="Password"
                fill="solid"
-              shape="round"
                 type="password"
+                label-placement="floating"
                 value={password}
                 onIonInput={(e) => setPassword(e.detail.value!)}
               />
