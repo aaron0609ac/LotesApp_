@@ -130,7 +130,7 @@ const Login: React.FC = () => {
                 onIonInput={(e) => setUsername(e.detail.value!)}
               />
               
-              <IonInput className="ion-margin-top ion-padding-top"
+              <IonInput className="ion-margin-top ion-padding-top ion-margin-bottom ion-bottom-top"
               label="Password"
                fill="solid"
                 type="password"
@@ -138,7 +138,7 @@ const Login: React.FC = () => {
                 value={password}
                 onIonInput={(e) => setPassword(e.detail.value!)}
               />
-              <IonButton className="ion-margin-top ion-padding-top" shape="round" expand="full" onClick={handleLogin}>
+              <IonButton  shape="round" expand="full" onClick={handleLogin}>
                 Login
               </IonButton>
               <IonLoading className="ion-margin-top ion-padding-top" isOpen={loading} message="Iniciando..." /> 

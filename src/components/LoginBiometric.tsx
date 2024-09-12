@@ -1,6 +1,6 @@
 import React, { useEffect,useState } from 'react';
-import { IonContent, IonInput, IonButton, IonLabel,setupIonicReact,IonApp,
-  IonHeader, IonTitle, IonToolbar,IonRow,IonCol,IonIcon,IonToast,IonRouterLink } from '@ionic/react';
+import { IonContent, IonInput, IonButton,setupIonicReact,IonApp,
+  IonHeader, IonTitle, IonToolbar,IonRow,IonCol,IonIcon } from '@ionic/react';
 
 import { personCircle, fingerPrintSharp } from "ionicons/icons";
 import { FingerprintAIO } from "@awesome-cordova-plugins/fingerprint-aio";
@@ -23,7 +23,7 @@ const Login: React.FC = () => {
       })
       .then(() => {
         // Authentication was successful
-        window.location.href = './page/Lotes';
+        window.location.href = './page/LotesRegistro';
         console.log('Fingerprint authentication successful');
       })
       .catch((error) => {

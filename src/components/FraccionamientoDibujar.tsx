@@ -1,8 +1,8 @@
 // src/components/DrawingMap.js
-import React, {useState, useRef, useEffect} from 'react';
-import { IonContent, IonHeader, IonPage, IonToolbar } from '@ionic/react';
+import React, {useState, useRef} from 'react';
+import { IonContent, IonHeader, IonPage } from '@ionic/react';
 import { IonFab, IonFabButton ,IonIcon  } from '@ionic/react';
-import { GoogleMap, DrawingManager, Marker } from '@react-google-maps/api';
+import { GoogleMap, DrawingManager } from '@react-google-maps/api';
 import axios from 'axios';
 import { chevronBackCircle } from 'ionicons/icons';
 import { Link } from 'react-router-dom';
@@ -95,7 +95,8 @@ const FraccionamientoDibujar : React.FC<ContainerProps> = ({match}) => {
     // Handle cancel action (optional)
     
     setIsConfirmationDialogOpen(false);
-    window.location.reload();
+    //location.reload();
+    window.history.back();
   };
   
  
@@ -132,7 +133,7 @@ const FraccionamientoDibujar : React.FC<ContainerProps> = ({match}) => {
                       strokeColor: '#7A9AFF', // Change the border color
                     },
                     drawingControl:true,
-                    drawingControlOptions:{position:google.maps.ControlPosition.LEFT_CENTER}}}
+                    drawingControlOptions:{position:google.maps.ControlPosition.LEFT_TOP}}}
         
         />
        

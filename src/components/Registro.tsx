@@ -78,31 +78,29 @@ const Registro: React.FC = () => {
               style={{ fontSize: "70px", color: "#0040ff" }}
               icon={personCircle}
             />
-            <IonTitle><b>Nombre</b></IonTitle>
-              <br/>
-              <IonInput
-                 fill="outline"
-                 shape="round"
+           
+              <IonInput className="ion-margin-top ion-padding-top"
+              label="Nombre"
+                 fill="solid"
                 type="text"
+                label-placement="floating"
                 value={nombre}
                 onIonInput={(e) => setNombre(e.detail.value!)}
               />
-              <br/>
-              <IonTitle><b>Email</b></IonTitle>
-              <br/>
-              <IonInput
-                 fill="outline"
-                 shape="round"
+             
+              <IonInput className="ion-margin-top ion-padding-top"
+              label="Email"
+                 fill="solid"
                 type="text"
+                label-placement="floating"
                 value={username}
                 onIonInput={(e) => setUsername(e.detail.value!)}
               />
-              <br/>
-              <IonTitle><b>Password</b></IonTitle>
-              <br/>
-              <IonInput
-               fill="outline"
-              shape="round"
+             
+              <IonInput className="ion-margin-top ion-padding-top"
+              label="Password"
+               fill="solid"
+               label-placement="floating"
                 type="password"
                 value={password}
                 onIonInput={(e) => setPassword(e.detail.value!)}
@@ -112,7 +110,7 @@ const Registro: React.FC = () => {
                 Crear usuario
               </IonButton>
               <IonLoading isOpen={loading} message="Creando..." /> 
-              <Link to={`../`}><p>Regresar</p></Link>
+              <Link to={`../Login/`}><p>Regresar</p></Link>
             </div>
             </IonCol>
         </IonRow>
